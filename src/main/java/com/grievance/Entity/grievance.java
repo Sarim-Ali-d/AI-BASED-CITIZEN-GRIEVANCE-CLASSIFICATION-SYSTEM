@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
-public class grievance {
+public class  grievance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -40,16 +40,16 @@ public class grievance {
     @Column(nullable = false)
     private GrievanceStatus status;
     //  Department Assignment
-    // ---------------------------------------------------------------
+
     @Column(name = "assigned_department")
     private String assignedDepartment;
 
     @Column(name = "resolution_notes", columnDefinition = "TEXT")
     private String resolutionNotes;
 
-    // ---------------------------------------------------------------
+
     //  AI Classification Metadata
-    // ---------------------------------------------------------------
+
     @Column(name = "ai_suggested_category")
     private String aiSuggestedCategory;
 
@@ -68,15 +68,15 @@ public class grievance {
     @Column(name = "ai_sentiment")
     private String aiSentiment;
 
-    // ---------------------------------------------------------------
+
     //  Tracking
-    // ---------------------------------------------------------------
+
     @Column(name = "tracking_number", unique = true, nullable = false)
     private String trackingNumber;
 
-    // ---------------------------------------------------------------
+
     //  Audit Timestamps
-    // ---------------------------------------------------------------
+
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
 
@@ -86,9 +86,9 @@ public class grievance {
     @Column(name = "resolved_at")
     private LocalDateTime resolvedAt;
 
-    // ---------------------------------------------------------------
+
     //  Lifecycle Hooks
-    // ---------------------------------------------------------------
+
     @PrePersist
     protected void onCreate() {
         this.createdAt = LocalDateTime.now();
