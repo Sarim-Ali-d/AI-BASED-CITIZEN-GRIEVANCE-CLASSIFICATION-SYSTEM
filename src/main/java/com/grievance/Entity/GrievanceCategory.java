@@ -1,0 +1,18 @@
+package com.grievance.Entity;
+
+public enum GrievanceCategory {
+    ROADS_AND_INFRASTRUCTURE,
+    WATER_SUPPLY,
+    ELECTRICITY,
+    SANITATION_AND_WASTE,
+    PUBLIC_HEALTH,
+    EDUCATION,
+    LAW_AND_ORDER,
+    TAXATION,
+    LAND_AND_PROPERTY,
+    SOCIAL_WELFARE,
+    TRANSPORTATION,
+    ENVIRONMENT,
+    CORRUPTION,
+    OTHER
+}
